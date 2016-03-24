@@ -63,4 +63,7 @@ objc_binary(
         "data/tensorflow_inception_graph.pb",
     ],
     copts = ["-Wl,--whole-archive", "-femit-all-decls"],
+    linkopts = [
+        "-all_load",
+    ],
 )

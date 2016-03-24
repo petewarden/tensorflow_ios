@@ -185,6 +185,7 @@ class CpuCastOp : public CastOpBase {
   }
 };
 
+#if GOOGLE_CUDA
 class GpuCastOp : public CastOpBase {
  public:
   explicit GpuCastOp(OpKernelConstruction* ctx) : CastOpBase(ctx) {
@@ -211,6 +212,7 @@ class GpuCastOp : public CastOpBase {
     return Unimplemented();
   }
 };
+#endif  // GOOGLE_CUDA
 
 #undef CAST_CASE
 
