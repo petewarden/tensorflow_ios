@@ -1097,7 +1097,7 @@ picked in the interval `[lower, upper]`.
 
 - - -
 
-### `tf.image.per_image_whitening(image)` {#per_image_whitening}
+### `tf.image.per_image_standardization(image)` {#per_image_standardization}
 
 Linearly scales `image` to have zero mean and unit norm.
 
@@ -1109,7 +1109,7 @@ of all values in image, and
 away from zero to protect against division by 0 when handling uniform images.
 
 Note that this implementation is limited:
-*  It only whitens based on the statistics of an individual image.
+*  It only scales based on the statistics of an individual image.
 *  It does not take into account the covariance structure.
 
 ##### Args:
